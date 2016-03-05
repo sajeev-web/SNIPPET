@@ -3,11 +3,11 @@
 	"use strict";
 	var Script = (function() {
 
-	var CONSTANTS = 
-                {
+    	var CONSTANTS = 
+        {
         	ID_SELECTORS:
         	{
-        		
+        		"pickDateAndTime": "#datetimepicker"
         	}  
         }  
 
@@ -16,7 +16,11 @@
         		this.demoFn();
         	},
         	demoFn: function() {
-				console.log("demoFn");
+    			$(CONSTANTS.ID_SELECTORS.pickDateAndTime).datetimepicker({
+                    dayOfWeekStart : 1,
+                    lang:'en'
+                });
+                $(CONSTANTS.ID_SELECTORS.pickDateAndTime).datetimepicker({value:'2015/04/15 05:03',step:10});
         	}
         }
 	})();
