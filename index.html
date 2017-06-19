@@ -3,66 +3,27 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/vendors/slick.css">
 <script type="text/javascript" src="js/vendors/jquery-2.2.0.js"></script>
 <body>
-
- <div class="tab">
-  <button class="tablinks active" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+<div id="slick-slider">
+    <div>
+      <iframe width="100%" src="//www.youtube.com/embed/ubGpDoyJvmI" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div>
+      <img src="http://images.all-free-download.com/images/graphiclarge/hd_pictures_of_beautiful_flowers_05_166896.jpg" alt="">
+    </div>
+    <div>
+      <img src="http://images.performgroup.com/di/library/GOAL_INTERNATIONAL/c2/97/hd-lionel-messi-barcelona_5toanmhsh09f11z1b8ucasj4p.jpg?t=1838656488&w=620&h=430" alt="">
+    </div>
 </div>
-
-<div id="London" class="tabcontent" style="display: block;">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div> 
-
-<script>
-// var $tablinks = $(".tablinks");
-// var $tabcontent = $(".tabcontent");
-// var i;
-
-// $tablinks.on('click', function(){
-// 	for (i = 0; i < $tabcontent.length; i++) {
-//         $tabcontent[i].style.display = "none";
-//     }
-
-//     for (i = 0; i < $tablinks.length; i++) {
-//         $tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-// });
-
-function openCity(evt, cityName) {
-    // Declare all variables
-    
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+ 
+<script type="text/javascript" src="js/vendors/slick.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#slick-slider").slick();
+  });
 </script>
-
 </body>
 </html>
